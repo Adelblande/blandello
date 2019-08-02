@@ -6,8 +6,9 @@ export const Container = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 320px;
+  opacity: ${props => props.done ? 0.6 : 1}
 
-  & + div {
+  & + div { /*todas as divs que tem outra div antes*/
     border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
 
@@ -16,6 +17,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 42px;
+    margin-bottom: 10px;
     
     h2 {
       color: #030303;
